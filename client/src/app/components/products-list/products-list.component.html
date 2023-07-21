@@ -4,6 +4,7 @@
       <input type="text" class="form-control" placeholder="Search by name" [(ngModel)]="name" />
       <div class="input-group-append">
         <button class="btn btn-outline-secondary" type="button" (click)="searchName()">
+          
           Search
         </button>
       </div>
@@ -16,7 +17,8 @@
         {{ product.name }}
       </li>
     </ul>
-    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllProducts()">
+    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllProducts()" *ngIf="showModeratorBoard || showAdminBoard">
+      
       Remove All
     </button>
   </div>

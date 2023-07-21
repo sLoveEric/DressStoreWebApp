@@ -9,6 +9,14 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ProfileComponent } from './profile/profile.component';
+import { BoardAdminComponent } from './board-admin/board-admin.component';
+import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
+import { BoardUserComponent } from './board-user/board-user.component';
+
+import { httpInterceptorProviders } from './_helpers/http.interceptor';
 
 @NgModule({
   declarations: [
@@ -16,7 +24,13 @@ import { HomeComponent } from './components/home/home.component';
     AddProductComponent,
     ProductDetailsComponent,
     ProductsListComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent,
+    ProfileComponent,
+    BoardAdminComponent,
+    BoardModeratorComponent,
+    BoardUserComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +38,7 @@ import { HomeComponent } from './components/home/home.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
